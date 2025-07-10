@@ -48,6 +48,7 @@ Stay updated on Bitcoin, Ethereum, and other top cryptocurrencies with dynamic i
 
     **🔐 Gemini API?**
    Open: [Gemini API](https://makersuite.google.com/app/apikey)
+   Model Limits: [Check](https://ai.google.dev/gemini-api/docs/rate-limits)
    
 5. **Run the bot**
     ```bash
