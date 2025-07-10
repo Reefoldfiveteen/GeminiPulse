@@ -1,3 +1,35 @@
+import tweepy
+import requests
+import config
+from datetime import datetime, timezone
+import google.generativeai as genai
+
+def get_crypto_price(ids=["bitcoin", "ethereum"], currency="usd"):
+    url = "https://api.coingecko.com/api/v3/simple/price"
+    params = {
+        "ids": ",".join(ids),
+        "vs_currencies": currency,
+        "include_24hr_change": "true"
+    }
+    res = requests.get(url, params=params)
+    return res.json()
+
+def format_for_prompt(data):
+    lines = []
+    for coin, info in data.items():
+        name = coin.capitalize()
+        price = info['usd']
+        change = info['usd_24h_change']
+        trend = "up" if change > 0 else "down"
+        lines.append(f"{name}: ${price:,.2f} ({change:+.2f}%) - {trend}")
+    return "\n".join(lines)
+
+def generate_tweet(prompt):
+    genai.configure(api_key=config.GEMINI_API_KEY)
+    model = genai.GenerativeModel(config.GEMINI_MODEL)
+    response = model.generate_content(prompt)
+    return response.text.strip()
+
 def post_tweet():
     data = get_crypto_price()
     now = datetime.now(timezone.utc).strftime("%d %b %Y, %H:%M UTC")
@@ -39,3 +71,7 @@ Mention emotions, momentum, or common behavior (FOMO, HODL, etc).
     response_thread = client.create_tweet(text=tweet_thread, in_reply_to_tweet_id=tweet_id)
 
     print("✅ Main + Thread Tweet posted.")
+
+
+if __name__ == "__main__":
+    post_tweet()
