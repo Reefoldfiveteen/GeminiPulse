@@ -25,8 +25,12 @@ TOPICS = [
 def generate_random_topic_tweet():
     selected_topic = random.choice(TOPICS)
     prompt = f"""
-Generate a tweet (max 280 characters) on the following topic: "{selected_topic}".
-Make it witty, concise, and engaging for crypto X users. Avoid boring or generic stuff.
+You're a crypto content creator. Write **exactly one** tweet (max 280 characters) about the topic: "{selected_topic}".
+
+- Do NOT give multiple options.
+- Do NOT include headings, explanation, or markdown like "**Option 1**".
+- Just return a single, fun, clean tweet ready to be posted on X (Twitter).
+- End with 2–4 relevant hashtags.
 """
     response = model.generate_content(prompt)
     return response.text.strip()
