@@ -51,8 +51,13 @@ Stay updated on Bitcoin, Ethereum, and other top cryptocurrencies with dynamic i
    Model Limits: [Check](https://ai.google.dev/gemini-api/docs/rate-limits)
    
 5. **Run the bot**
+   if you have full V2 dev access
     ```bash
     python3 bot.py
+    ```
+   free dev access use
+    ```bash
+    python3 bot1.py
     ```
 
 ---
