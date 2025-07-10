@@ -1,7 +1,7 @@
 import tweepy
 import requests
 import config
-from datetime import datetime
+from datetime import datetime, timezone
 import google.generativeai as genai
 
 def get_crypto_price(ids=["bitcoin", "ethereum"], currency="usd"):
@@ -32,7 +32,7 @@ def generate_tweet(prompt):
 
 def post_tweet():
     data = get_crypto_price()
-    now = datetime.now().strftime("%d %b %Y, %H:%M WIB")
+    now = datetime.now(timezone.utc).strftime("%d %b %Y, %H:%M UTC")
 
     market_summary = format_for_prompt(data)
     prompt = f"""
