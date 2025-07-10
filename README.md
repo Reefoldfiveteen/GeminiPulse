@@ -44,8 +44,51 @@ Stay updated on Bitcoin, Ethereum, and other top cryptocurrencies with dynamic i
     GEMINI_MODEL = "gemini-pro"
 
     ```
-4. **Run the bot**
+
+    **🔐 Gemini API?**
+   Open: [Gemini API]([https://coingecko.com](https://makersuite.google.com/app/apikey))
+   
+5. **Run the bot**
     ```bash
     python3 bot.py
     ```
-    
+
+---
+## ⏰ Automate with Cron (Optional)
+To schedule auto-posting every hour:
+```
+crontab -e
+```
+Add this line:
+```
+0 * * * * cd /path/to/GeminiPulse && /usr/bin/python3 bot.py >> log.txt 2>&1
+```
+---
+## 📤 Example Tweet Output
+🔥 Market Pulse (Jul 10, 2025, 10:00 AM)
+Bitcoin surged to $66,800 📈
+Ethereum follows with +3.1%!
+Is this the start of a bull wave? 🐂🚀
+
+---
+## 🛠 Tech Stack
+* CoinGecko API – Real-time market data
+* Google Gemini AI – Language generation
+* Tweepy – Twitter/X API integration
+* Python 3 – Core runtime
+
+---
+## 🧠 Use Case Ideas
+* Run as a personal market analyst bot
+* Integrate with Discord for multi-platform alerts
+* Expand to include charts, RSI/MA trends, or on-chain data
+
+---
+## ⚠️ Disclaimer
+This project is for educational and informational purposes only. It does not provide financial advice. Trade responsibly.
+
+---
+## 📄 License
+MIT License – Free to use, modify, and share with proper attribution.
+
+
