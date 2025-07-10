@@ -20,7 +20,7 @@ Stay updated on Bitcoin, Ethereum, and other top cryptocurrencies with dynamic i
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/GeminiPulse.git
+   git clone https://github.com/Reefoldfiveteen/GeminiPulse.git
    ```
    ```
    cd GeminiPulse
