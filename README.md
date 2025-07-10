@@ -47,8 +47,7 @@ Stay updated on Bitcoin, Ethereum, and other top cryptocurrencies with dynamic i
     ```
 
     **🔐 Gemini API?**
-   
-   Open: [Gemini API]([https://coingecko.com](https://makersuite.google.com/app/apikey))
+   Open: [Gemini API](https://makersuite.google.com/app/apikey)
    
 5. **Run the bot**
     ```bash
