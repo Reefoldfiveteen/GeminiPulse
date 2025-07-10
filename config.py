@@ -1,0 +1,9 @@
+# === Twitter API ===
+API_KEY = "TWITTER_API_KEY"
+API_SECRET = "TWITTER_API_SECRET"
+ACCESS_TOKEN = "TWITTER_ACCESS_TOKEN"
+ACCESS_TOKEN_SECRET = "TWITTER_ACCESS_TOKEN_SECRET"
+
+# === Gemini API ===
+GEMINI_API_KEY = "GEMINI_API_KEY"
+GEMINI_MODEL = "gemini-pro"  # Bisa diganti kalau ada model baru nanti
