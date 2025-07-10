@@ -31,6 +31,7 @@ Stay updated on Bitcoin, Ethereum, and other top cryptocurrencies with dynamic i
     pip install -r requirements.txt
     ```
 3. **Configure your credentials**
+
    Edit file named config.py:
     ```bash
     # Twitter API
