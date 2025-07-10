@@ -37,7 +37,7 @@ def format_for_prompt(data):
 # --- Generate kalimat dengan Gemini
 def generate_tweet(prompt):
     genai.configure(api_key=config.GEMINI_API_KEY)
-    model = genai.GenerativeModel("gemini-pro")
+    model = genai.GenerativeModel(config.GEMINI_MODEL)
     response = model.generate_content(prompt)
     return response.text.strip()
 
